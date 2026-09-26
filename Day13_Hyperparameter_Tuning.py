@@ -1,8 +1,7 @@
 # ==============================================================================
 # DAY 13: Model Optimization - Hyperparameter Tuning via GridSearchCV
 # Description: Tuning and optimizing the Random Forest baseline classifier on 
-#              the Alzheimer's BACE dataset using 3-fold cross-validation
-#              parameters on Scikit-Learn matrices.
+#              the Alzheimer's BACE dataset using 3-fold cross-validation.
 # ==============================================================================
 
 import warnings
@@ -17,9 +16,10 @@ print("--- Day 13: Hyperparameter Tuning Grid Search ---")
 tasks, datasets, transformers = dc.molnet.load_bace_classification(featurizer='ECFP', splitter='random')
 train_dataset, valid_dataset, test_dataset = datasets
 
-# Step 2: Defining parameter grid dictionary matrix (Explicit Fixed List)
+# Step 2: Defining parameter grid dictionary matrix
+# Yahan brackets ke andar numbers [10, 50, 100] bilkul saaf aur sahi likhe hain!
 param_grid = {
-    'n_estimators':,
+    'n_estimators': [10, 50, 100],
     'max_depth': [None, 10]
 }
 
