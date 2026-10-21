@@ -1,0 +1,51 @@
+# ==============================================================================
+# PROJECT #1: Advanced Materials Informatics Screening Dashboard
+# Description: Engineering a production-grade multidimensional visualization matrix
+#              to screen polymer biocomposite formulation variations.
+# ==============================================================================
+
+import os
+import sys
+import subprocess
+import warnings
+warnings.filterwarnings('ignore')
+
+print("Initializing Project #1 Analytics Environment Container...")
+subprocess.run([sys.executable, "-m", "pip", "install", "-q", "matplotlib", "numpy"], stdout=subprocess.DEVNULL)
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+print("--- Project #1: Executing Cross-Property Biopolymer Matrix Analytics ---")
+
+# General dataset descriptors arrays for open-source tracking repository
+formulation_matrix_steps = ['0.5% Additive', '1.0% Additive', '2.0% Additive', '3.0% Additive', '5.0% Additive']
+thermal_degradation_temp = np.array([210.5, 245.2, 289.1, 265.8, 230.4]) 
+tensile_modulus_gpa = np.array([1.8, 2.9, 4.5, 3.8, 2.1])
+
+fig, ax1 = plt.subplots(figsize=(7.5, 4.5))
+
+# Plotting the Primary Axis (Thermal Performance Profiles)
+color_t = '#1f77b4'
+ax1.set_xlabel('Biopolymer Matrix Functional Blend Formulation Layout', fontweight='bold', labelpad=12)
+ax1.set_ylabel('Thermal Stability Threshold - TGA (°C)', color=color_t, fontweight='bold')
+bars = ax1.bar(formulation_matrix_steps, thermal_degradation_temp, color=color_t, alpha=0.6, width=0.4, edgecolor='black', label='Thermal Limit')
+ax1.tick_params(axis='y', labelcolor=color_t)
+ax1.set_ylim(0, 350)
+
+# Generating the Secondary Axis (Mechanical Efficacy Performance)
+ax2 = ax1.twinx()
+color_m = '#ff7f0e'
+ax2.set_ylabel('Tensile Modulus Strength Efficiency (GPa)', color=color_m, fontweight='bold')
+line = ax2.plot(formulation_matrix_steps, tensile_modulus_gpa, color=color_m, marker='s', linewidth=2.5, markersize=8, label='Mechanical Modulus')
+ax2.tick_params(axis='y', labelcolor=color_m)
+ax2.set_ylim(0, 6.0)
+
+plt.title('Materials Informatics Dashboard: Cross-Property Multi-Variable Screening', fontweight='bold', fontsize=11, pad=15)
+ax1.grid(True, linestyle=':', alpha=0.5)
+fig.tight_layout()
+
+# Saving production asset under general format
+plt.savefig('project1_materials_screening_dashboard.png', dpi=300)
+print("\n🎉 Project #1 Graphic Dashboard has been successfully saved!")
+plt.show()
