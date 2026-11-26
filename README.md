@@ -2,7 +2,7 @@
 
 Welcome to my 30-day intensive computational chemistry and cheminformatics portfolio! As an **MPhil Chemistry graduate (3.94 CGPA)**, I built this repository to bridge the gap between traditional wet-lab chemistry and modern **Artificial Intelligence, Machine Learning, and Molecular Modeling**.
 
----
+🎁 Want all 30 ready-to-run Python scripts + an Exclusive PDF Study Guide & RDKit Cheat Sheet in one organized bundle? Grab my Starter Kit here:https://batoolian413.gumroad.com/l/smscup 
 
 ## 🚀 Key Skills & Tech Stack
 * **Cheminformatics:** RDKit, DeepChem, SMILES Manipulation, Molecular Fingerprints (Morgan/MACCS)
